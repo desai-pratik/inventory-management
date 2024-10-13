@@ -45,7 +45,7 @@ const SupplierManagement = ({ suppliers, onAddSupplier }) => {
             placeholder='Enter Supplier Name'
             value={supplier.name}
             onChange={handleChange}
-            className={`appearance-none border rounded-lg w-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.name ? "border-red-500" : "border-gray-300"}`}
+            className={`appearance-none border rounded w-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.name ? "border-red-500" : "border-gray-300"}`}
           />
           {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
         </div>
@@ -57,7 +57,7 @@ const SupplierManagement = ({ suppliers, onAddSupplier }) => {
             value={supplier.contact}
             placeholder='Enter Email'
             onChange={handleChange}
-            className={`appearance-none border rounded-lg w-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.contact ? "border-red-500" : "border-gray-300"}`}
+            className={`appearance-none border rounded w-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.contact ? "border-red-500" : "border-gray-300"}`}
           />
           {errors.contact && <p className="text-red-500 text-sm mt-1">{errors.contact}</p>}
         </div>
@@ -69,16 +69,16 @@ const SupplierManagement = ({ suppliers, onAddSupplier }) => {
             placeholder="Enter Supplied Items"
             value={supplier.itemsSupplied}
             onChange={handleChange}
-            className={`appearance-none border rounded-lg w-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.itemsSupplied ? "border-red-500" : "border-gray-300"}`}
+            className={`appearance-none border rounded w-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.itemsSupplied ? "border-red-500" : "border-gray-300"}`}
           />
           {errors.itemsSupplied && <p className="text-red-500 text-sm mt-1">{errors.itemsSupplied}</p>}
         </div>
-        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200">
+        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
           Add Supplier
         </button>
       </form>
 
-      <h3 className="text-lg font-semibold mb-2 text-gray-800">Existing Suppliers</h3>
+      <h3 className="text-lg mb-2 text-gray-800">Existing Suppliers</h3>
       <ul className="border-t mt-4 pt-2">
         {suppliers.map((sup) => (
           <li key={sup.id} className="mb-2 py-2 border-b last:border-b-0">
